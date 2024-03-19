@@ -10,10 +10,12 @@ function NoteForm({ onNoteAdded }){
     }
    async function handleSubmit(e){
         e.preventDefault();
-       console.log(noteForm)
-       await sendForm(noteForm)
+        const createdAt = new Date().toISOString();
+        const noteWithTimestamp = { ...noteForm, createdAt };
+    
+       await sendForm(noteWithTimestamp)
        if (typeof onNoteAdded === 'function') {
-        onNoteAdded(noteForm);
+        onNoteAdded(noteWithTimestamp);
     }
     }
 
