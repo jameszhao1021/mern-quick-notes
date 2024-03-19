@@ -46,7 +46,7 @@ const NavBar = ({user, setUser}) => {
     }
     return (
         <nav>
-            <Link to="/orders">Order History</Link>
+            <Link to="/">Order History</Link>
             i refuse to use nbsp | i refuse to use nbsp
             <Link to="/orders/new">New Order</Link> | 
             <Link to="" onClick={handleLogout}>Logout { user.name }</Link> | 

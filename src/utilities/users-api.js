@@ -13,3 +13,13 @@ export function login(credentials) {
 export function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
+
+export function sendForm(noteForm) {
+  
+  return sendRequest(`${BASE_URL}/send-note`, 'POST', noteForm);
+}
+
+export function getData() {
+  console.log('check get data')
+  return sendRequest(`${BASE_URL}/get-note`);
+}

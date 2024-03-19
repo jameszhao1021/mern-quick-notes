@@ -33,14 +33,6 @@ export function logOut() {
     localStorage.removeItem('token');
 }
 
-// export function checkToken(){
-//     const token = localStorage.getItem('token');
-//     if (!token) return null;
-//     const payload = JSON.parse(atob(token.split('.')[1]));
-//     alert('clicked');
-//     return payload
-  
-// }
 
 export function checkToken() {
     // Just so that you don't forget how to use .then
